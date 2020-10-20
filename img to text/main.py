@@ -27,10 +27,8 @@ def xlswrite(text1):
 def imagetotext(filename):
     img = Image.open(filename)                               
     pytesseract.pytesseract.tesseract_cmd ='C:/Program Files/Tesseract-OCR/tesseract.exe'   
-    result = pytesseract.image_to_string(img)     
-    with open('abc.txt',mode ='w') as file:      
-                    file.write(result) 
-                    xlswrite(result)
+    result = pytesseract.image_to_string(img)      
+    xlswrite(result)
 
 
 def UploadAction(event=None):
